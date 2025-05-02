@@ -23,7 +23,7 @@ async def start_handler(message: Message):
         reply_markup=keyboard
     )
 
-@dp.message_handler(lambda message: message.text == "🛒 Купить гайд за 1800 ₽")
+@router.message(lambda message: message.text == "🛒 Купить гайд за 1800 ₽")
 async def buy_guide_handler(message: Message):
     await message.answer("Чтобы купить гайд за 1800 ₽, нажмите на кнопку оплаты или свяжитесь с поддержкой.")
 
