@@ -4,7 +4,7 @@ from aiogram.filters import CommandStart
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton
 import asyncio
 
-API_TOKEN = "7621464920:AAEaXDR-RY1YUx9Wbp-nVEr1Dw1uRSl7Ejc"
+API_TOKEN = "77621464920:AAE6JEZ2zvbRFMwii4s68VIg_3UA6l5y1GY"
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
 
