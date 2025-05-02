@@ -2,6 +2,7 @@ import asyncio
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import CommandStart
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton
+from aiogram import Router, F
 import asyncio
 
 API_TOKEN = "7621464920:AAGRn_2z8GLUyEdGZ6tS-_EoYpa_HiaMvPI"
