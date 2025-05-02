@@ -1,24 +1,18 @@
 import asyncio
 from aiogram import Bot, Dispatcher, types
-from aiogram.filters import CommandStart
+import asyncio
 
-API_TOKEN = '7621464920:AAGGIg20gP_cLWeGo6o-7BHwClNwmY_bsdM'
+API_TOKEN = '7621464920:AAGGIg20gP_cLWeGo6o-7BHwClNwmY_bsdM'  # <-- в кавычках!
 
-bot = Bot(
-7621464920:AAGGIg20gP_cLWeGo6o-7BHwClNwmY_bsdM)
+bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
 
-@dp.message(CommandStart())
-async def send_welcome(message: types.Message):
-    await message.answer(
-        "Я рядом, когда саду нужна помощь.\n"
-        "Я вижу, как живет ваш сад и помогаю сохранить то, что в нем важно.\n"
-        "У каждого сада — свой путь.\n"
-        "Моя задача — пройти его вместе с вами: внимательно, честно, с уважением к каждому листику.\n"
-        "Откройте памятку — и начните слышать свой сад по-настоящему."
-    )
+@dp.message()
+async def echo(message: types.Message):
+    await message.answer(message.text)
 
 async def main():
+    await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
