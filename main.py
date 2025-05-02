@@ -22,11 +22,11 @@ async def start_handler(message: Message):
         reply_markup=keyboard
     )
 
-@dp.message(lambda message: message.text == "💰 Купить гайд за 1800 ₽")
+@dp.message_handler(lambda message: message.text == "🛒 Купить гайд за 1800 ₽")
 async def buy_guide_handler(message: Message):
     await message.answer("Чтобы купить гайд за 1800 ₽, нажмите на кнопку оплаты или свяжитесь с поддержкой.")
 
-@dp.message(lambda message: message.text == "ℹ️ Помощь")
+@dp.message_handler(lambda message: message.text == "❓ Помощь")
 async def help_handler(message: Message):
     await message.answer(
     "🌿 Добро пожаловать в «Зелёный Доктор»!\n\n"
