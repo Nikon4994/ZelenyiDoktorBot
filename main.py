@@ -27,7 +27,7 @@ async def start_handler(message: Message):
 async def buy_guide_handler(message: Message):
     await message.answer("Чтобы купить гайд за 1800 ₽, нажмите на кнопку оплаты или свяжитесь с поддержкой.")
 
-@dp.message_handler(lambda message: message.text == "❓ Помощь")
+@router.message(lambda message: message.text == "🛠 Помощь")
 async def help_handler(message: Message):
     await message.answer(
     "🌿 Добро пожаловать в «Зелёный Доктор»!\n\n"
