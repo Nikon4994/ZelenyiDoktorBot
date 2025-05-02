@@ -4,7 +4,8 @@ from aiogram.filters import CommandStart
 
 API_TOKEN = 'ТВОЙ_ТОКЕН'
 
-bot = Bot(token=API_TOKEN)
+bot = Bot(
+7621464920:AAGGIg20gP_cLWeGo6o-7BHwClNwmY_bsdM)
 dp = Dispatcher()
 
 @dp.message(CommandStart())
