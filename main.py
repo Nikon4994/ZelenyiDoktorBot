@@ -7,9 +7,9 @@ import asyncio
 
 API_TOKEN = "7621464920:AAGRn_2z8GLUyEdGZ6tS-_EoYpa_HiaMvPI"
 bot = Bot(token=API_TOKEN)
-dp = Dispatcher()
+router = Router()
 
-@dp.message(CommandStart())
+на @router.message(CommandStart())
 async def start_handler(message: Message):
     keyboard = ReplyKeyboardMarkup(
         keyboard=[
